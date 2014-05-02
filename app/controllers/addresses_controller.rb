@@ -3,7 +3,7 @@ require 'json'
 
 class AddressesController < ApplicationController
   def fetch_coordinates
-    @address = "the corner of Foster and Sheridan"
+    @address = "7116 west shore drive edina mn"
     @url_safe_address = URI.encode(@address)
 
     #result = JSON.parse(open(http://maps.googleapis.com/maps/api/geocode/json?address=the+corner+of+Foster+and+Sheridan&sensor=false))
