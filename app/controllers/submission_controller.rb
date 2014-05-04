@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'json'
 
-class AddressesController < ApplicationController
+class SubmissionController < ApplicationController
 
-  def fetch_coordinates
-    @address = params["address"]
+def show
+    @address = params[:user_input]
     @url_safe_address = URI.encode(@address)
 
 
@@ -21,6 +21,4 @@ class AddressesController < ApplicationController
     @longitude = location["lng"]
 
   end
-end
-
 
